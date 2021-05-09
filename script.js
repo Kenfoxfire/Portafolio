@@ -1,7 +1,7 @@
 const spanTextoTecleado = document.getElementById("texto-escribir");
 const cursorSpan = document.querySelector(".cursor");
 
-const texto = "Angel Te Amo <3";
+const texto = "FullStack Web Development";
 const tiempoTeclear = 150;
 const velocidadBorrar = 100;
 const esperaBorrar = 2000; 
