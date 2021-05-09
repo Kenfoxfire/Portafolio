@@ -47,7 +47,7 @@ section {
   font-size: 3em;
 }
 
-.presentacion .content .animated-text .cursor {
+.animated-text .cursor {
   display: inline-block;
   background-color: #ccc;
   margin-left: 0.1rem;
@@ -113,11 +113,6 @@ header {
   transition: 0.5s ease;
 }
 
-header.sticky {
-  background: #721818;
-  padding: 10px 200px;
-}
-
 header .nombre {
   color: #fff;
   font-size: 1em;
@@ -139,11 +134,16 @@ header .navigation a {
 }
 
 header .navigation a:hover {
-  color: #dd77655d;
+  color: #f5b989;
+}
+
+.sticky {
+  background: #721818;
+  padding: 10px 200px;
 }
 
 header.sticky .navigation a:hover {
-  color: #331111;
+  color: #180909;
 }
 
 .scrollToTop-btn {
@@ -192,6 +192,11 @@ body {
           flex-direction: column;
 }
 
+.title p {
+  font-size: 1em;
+  width: 80%;
+}
+
 .section-title {
   position: relative;
   color: #df3d3d;
@@ -217,11 +222,6 @@ body {
   width: 45%;
 }
 
-.acercade .content .col-right {
-  position: relative;
-  width: 50%;
-}
-
 .acercade .content .col-left .img-card {
   position: relative;
   width: 100%;
@@ -238,6 +238,11 @@ body {
      object-fit: cover;
   border-radius: 10px;
   background-image: url(./src/img/img1.jpg);
+}
+
+.acercade .content .col-right {
+  position: relative;
+  width: 50%;
 }
 
 .acercade .content .col-right .content-title {
@@ -376,11 +381,6 @@ body {
   margin-top: 20px;
 }
 
-.title p {
-  font-size: 1em;
-  width: 80%;
-}
-
 .servicios .content .card {
   background: #fff;
   width: 340px;
@@ -411,11 +411,6 @@ body {
   transition: transform 0.5s unset, -webkit-transform 0.5s unset;
 }
 
-.servicios .content .card:hover .service-icon {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-
 .servicios .content .card .info {
   text-align: center;
 }
@@ -425,6 +420,11 @@ body {
   font-size: 1.2em;
   font-weight: 700;
   margin: 10px;
+}
+
+.servicios .content .card:hover .service-icon {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .trabajo {
@@ -452,11 +452,6 @@ body {
   margin: 20px;
 }
 
-.trabajo .content .card {
-  width: 600px;
-  margin: 15px;
-}
-
 .trabajo .content .card .card-img {
   position: relative;
   width: 100%;
@@ -481,6 +476,11 @@ body {
 .trabajo .content .card .card-img img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.trabajo .content .card {
+  width: 600px;
+  margin: 15px;
 }
 
 footer {
@@ -519,11 +519,21 @@ footer .contacto span {
   header {
     padding: 12px 20px;
   }
-  header.sticky {
-    padding: 10px 20px;
-  }
   header .navigation {
     display: none;
+  }
+  header .navigation a {
+    color: #000;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 20px;
+  }
+  header .navigation a:hover {
+    background: #dd77655d;
+    color: #fff;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   header .navigation.active {
     z-index: 888;
@@ -551,18 +561,8 @@ footer .contacto span {
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
   }
-  header .navigation a {
-    color: #000;
-    font-size: 1.2em;
-    margin: 10px;
-    padding: 0 20px;
-    border-radius: 20px;
-  }
-  header .navigation a:hover {
-    background: #dd77655d;
-    color: #fff;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+  header.sticky {
+    padding: 10px 20px;
   }
   .menu-btn {
     position: absolute;
