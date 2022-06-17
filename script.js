@@ -10,26 +10,26 @@ let letraIndice = 0;
 
 function teclear() {
   if (letraIndice < texto.length) {
-    if(!cursorSpan.classList.contains("tecleando")) cursorSpan.classList.add("tecleando");
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     spanTextoTecleado.textContent += texto.charAt(letraIndice);
     letraIndice++;
     setTimeout(teclear, tiempoTeclear);
   } 
   else {
-    cursorSpan.classList.remove("tecleando");
+    cursorSpan.classList.remove("typing");
   	setTimeout(borrar, esperaBorrar);
   }
 }
 
 function borrar() {
 	if (letraIndice > 0) {
-    if(!cursorSpan.classList.contains("tecleando")) cursorSpan.classList.add("tecleando");
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     spanTextoTecleado.textContent = texto.substring(0, letraIndice-1);
     letraIndice--;
     setTimeout(borrar, velocidadBorrar);
   } 
   else {
-    cursorSpan.classList.remove("tecleando");
+    cursorSpan.classList.remove("typing");
     setTimeout(teclear, tiempoTeclear + 1100);
   }
 }

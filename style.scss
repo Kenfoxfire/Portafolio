@@ -1,175 +1,191 @@
 @import "./variables.scss";
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-primary;
-    scroll-behavior: smooth;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+  scroll-behavior: smooth;
+}
 
 
 
-  section{
-    padding: 100px 200px;
-  }
-  
-  // parallax
-  .presentacion{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: initial;
-    background: url(./src/img/fondo.png)no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    
-    .content{
-      max-width: 800px;
+section {
+  padding: 100px 200px;
+}
 
-      h2{
-       color: #fff;
-       font-size: 2em;
-       font-weight: 500;
-     }
+// parallax
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: initial;
+  background: url(./src/img/fondo.png)no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  .content {
+    max-width: 800px;
+
+    h2 {
+      color: #fff;
+      font-size: 2em;
+      font-weight: 500;
     }
-  }  
+  }
+}
 
-  
-  
 
-  .animated-text{
+
+
+.animated-text {
+  position: relative;
+
+  h3 {
+    color: $color-typed-Text;
+    font-size: 3em;
+  }
+
+  .cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+}
+
+
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+
+  49% {
+    background-color: #ccc;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ccc;
+  }
+}
+
+
+
+header {
+  z-index: 999;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+
+
+
+
+  .nombre {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .navigation {
     position: relative;
-    h3{
-      color: $color-typed-Text;
-      font-size: 3em;
-    }
 
-    .cursor {
-     display: inline-block;
-     background-color: #ccc;
-     margin-left: 0.1rem;
-     width: 3px;
-     animation: blink 1s infinite;
-   }
-  }
-  
-  
-
-  @keyframes blink {
-    0%  { background-color: #ccc; }
-    49% { background-color: #ccc; }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
-    100%  { background-color: #ccc; }
-  }
-
-  
-  
-  header{
-    z-index: 999;
-    position: fixed;
-    background: rgba(255, 255, 255, 0.1);
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.5s ease;
-
-
-
-
-    .nombre{
-     color: #fff;
-     font-size: 1em;
-     font-weight: 700;
-     text-transform: uppercase;
-     text-decoration: none;
-   }
-    .navigation{
-     position: relative;
-  
-     a{
+    a {
       color: #fff;
       font-size: 1em;
       font-weight: 500;
       text-decoration: none;
       margin-left: 30px;
     }
-  
-
-    a:hover{
-     color: $color-hover-ligth;
-   }
-
-   }
-  }
 
 
-  .sticky{
-    background: $color-header;
-    padding: 10px 200px;
-  }
-
-
-  
-  
-  
-  header.sticky .navigation a:hover{
-    color: $color-hover-dark;
-  }
-  
-
-  .scrollToTop-btn{
-    z-index: 999;
-    position: fixed;
-    color: #fff;
-    width: 45px;
-    height: 45px;
-    right: 0;
-    bottom: 10px;
-    font-size: 22px;
-    text-align: center;
-    line-height: 45px;
-    border-radius: 3px;
-    cursor: pointer;
-    pointer-events: none;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-  
-  .scrollToTop-btn.active{
-    right: 20px;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  
-  
-  body{
-    min-height: 110vh;
-  }
-  
-  .title{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    p{
-     font-size: 1em;
-     width: 80%;
+    a:hover {
+      color: $color-hover-ligth;
     }
+
+  }
 }
 
-.section-title{
+
+.sticky {
+  background: $color-header;
+  padding: 10px 200px;
+}
+
+
+
+
+
+header.sticky .navigation a:hover {
+  color: $color-hover-dark;
+}
+
+
+.scrollToTop-btn {
+  z-index: 999;
+  position: fixed;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  right: 0;
+  bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 3px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.scrollToTop-btn.active {
+  right: 20px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+body {
+  min-height: 110vh;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    font-size: 1em;
+    width: 80%;
+  }
+}
+
+.section-title {
   position: relative;
   color: $color-primary;
   font-size: 2.2em;
@@ -178,7 +194,7 @@
 }
 
 
-.acercade .content{
+.about .content {
   position: relative;
   width: 100%;
   display: flex;
@@ -186,44 +202,44 @@
   margin-top: 20px;
 
 
-  .col-left{
+  .col-left {
     position: relative;
     width: 45%;
 
 
-    .img-card{
+    .img-card {
       position: relative;
       width: 100%;
       min-height: 450px;
 
-      img{
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-       border-radius: 10px;
-       background-image: url(./src/img/img1.jpg);
-      
-      
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        background-image: url(./src/img/img1.jpg);
+
+
       }
     }
 
 
   }
-  
-   .col-right{
+
+  .col-right {
     position: relative;
     width: 50%;
 
-    .content-title{
+    .content-title {
       font-size: 2em;
       font-weight: 800;
       margin-bottom: 20px;
     }
-    
-    .paragraph-text{
+
+    .paragraph-text {
       font-size: 1em;
     }
 
@@ -235,10 +251,10 @@
 
 
 
-.habilidades{
+.skills {
   background: $background-color;
 
-  .content{
+  .content {
     position: relative;
     width: 100%;
     display: flex;
@@ -246,113 +262,118 @@
     color: #fff;
     margin-top: 20px;
 
-    
-     .col-left{
+
+    .col-left {
       position: relative;
       width: 46%;
 
-      .content-title{
+      .content-title {
         margin-bottom: 20px;
       }
 
     }
-    
-    
-     .col-right{
+
+
+    .col-right {
       position: relative;
       width: 46%;
-      
-       .bar{
+
+      .bar {
         margin-bottom: 15px;
         padding: 10px;
-  
-        .info{
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         margin-bottom: 5px;
-  
-         span{
-         font-size: 18px;
-         font-weight: 500;
-       }
 
-       }
+        .info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 5px;
+
+          span {
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+        }
 
 
-       .line{
-        position: relative;
-        width: 100%;
-        height: 15px;
-        background: #ccc;
-        border-radius: 2px;
+        .line {
+          position: relative;
+          width: 100%;
+          height: 15px;
+          background: #ccc;
+          border-radius: 2px;
+        }
+
+
+        .line:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 2px;
+        }
+
+
+        .html:before {
+          width: 90%;
+          background: #e45126;
+        }
+
+
+
+        .css:before {
+          width: 70%;
+          background: #1e90db;
+        }
+
+        .javascript:before {
+          width: 90%;
+          background: #e3a324;
+        }
+
+        .angular:before {
+          width: 90%;
+          background: #dd3030;
+        }
+
+        .react:before {
+          width: 65%;
+          background: #304add;
+        }
+
+        .node:before {
+          width: 70%;
+          background: #40a048;
+        }
+
+        .mongo:before {
+          width: 50%;
+          background: #91dd97;
+        }
+
+        .couch-pouch:before {
+          width: 95%;
+          background: #d47069;
+        }
+
       }
-
-
-      .line:before{
-       content: '';
-       position: absolute;
-       height: 100%;
-       top: 0;
-       left: 0;
-       border-radius: 2px;
-     }
-
-
-     .html:before{
-      width: 85%; 
-      background: #e45126;
     }
 
-
-    
-     .css:before{
-      width: 60%;
-      background: #0c73b8;
-    }
-    
-     .javascript:before{
-      width: 80%;
-      background: #e3a324;
-    }
-    
-     .angular:before{
-      width: 60%;
-      background: #dd3030;
-    }
-    
-     .node:before{
-      width: 50%;
-      background: #40a048;
-    }
-    
-     .mongo:before{
-      width: 50%;
-      background: #91dd97;
-    }
-    
-     .couch-pouch:before{
-      width: 50%;
-      background: #d47069;
-    }
-
-      }
-    }
-    
   }
 
 }
 
 
-.servicios .title p{
-  
-    text-align: center;
+.servicios .title p {
+
+  text-align: center;
 
 
-  
+
 }
 
-.servicios .content{
+.servicios .content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -362,85 +383,85 @@
 
 
 
-  .card{
-   background: #fff;
-   width: 340px;
-   margin: 10px;
-   padding: 25px;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   box-shadow: 0 5px 25px ;
-   border-radius: 10px;
+  .card {
+    background: #fff;
+    width: 340px;
+    margin: 10px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 25px;
+    border-radius: 10px;
 
-   .service-icon{
-    color: #8a398a;
-    font-size: 8em;
-    text-align: center;
-    transition: transform 0.5s unset;
-   }
-
-   .info{
-    text-align: center;
-   
-    h3{
-      color: $color-primary;
-      font-size: 1.2em;
-      font-weight: 700;
-      margin: 10px;
+    .service-icon {
+      color: #8a398a;
+      font-size: 8em;
+      text-align: center;
+      transition: transform 0.5s unset;
     }
-   
-   }
+
+    .info {
+      text-align: center;
+
+      h3 {
+        color: $color-primary;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin: 10px;
+      }
+
+    }
   }
-  
-  .card:hover .service-icon{
-   transform: translateY(-10px);
+
+  .card:hover .service-icon {
+    transform: translateY(-10px);
   }
-  
+
 }
 
 
 
 
-.trabajo{
+.trabajo {
   background: $background-color;
 
-  .content{
-   display: flex;
-   justify-content: center;
-   flex-direction: row;
-   flex-wrap: wrap;
-   margin-top: 20px;
-   color: $color-white;
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: $color-white;
 
 
-   p{
-     margin: 20px;
-   }
+    p {
+      margin: 20px;
+    }
 
-   .card .card-img{
-     position: relative;
-     width: 100%;
-     height: 301px;
-     overflow: hidden;
-     border-radius: 10px;
-   }
-   
-   .card .card-img img{
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 10px;
-     transition: 0.5s ease;
-   }
-   
-   
-   .card .card-img img:hover{
-     transform: scale(1.2);
-   }
+    .card .card-img {
+      position: relative;
+      width: 100%;
+      height: 301px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .card .card-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: 0.5s ease;
+    }
+
+
+    .card .card-img img:hover {
+      transform: scale(1.2);
+    }
   }
 
 
@@ -449,7 +470,7 @@
 
 //  TODO 
 
-.trabajo .content .card{
+.trabajo .content .card {
   width: 600px;
   margin: 15px;
 }
@@ -462,7 +483,7 @@ footer {
   justify-content: center;
   background-color: $color-white;
 
-  .contacto{
+  .contacto {
     display: flex;
     align-items: center;
 
@@ -470,11 +491,12 @@ footer {
       margin: 0px 12px 0px 12px;
     }
 
-    a{
+    a {
       text-decoration: none;
 
     }
-    span{
+
+    span {
       color: #000;
       font-size: 1.2em;
 
@@ -485,22 +507,22 @@ footer {
 
 
 
-@media (max-width: $breakpoint-sm ){
-  header{
+@media (max-width: $breakpoint-sm ) {
+  header {
     padding: 12px 20px;
 
-    .navigation{
+    .navigation {
       display: none;
 
-      a{
+      a {
         color: #000;
         font-size: 1.2em;
         margin: 10px;
         padding: 0 20px;
         border-radius: 20px;
       }
-    
-      a:hover{
+
+      a:hover {
         background: $color-secondary;
         color: #fff;
         transition: 0.3s ease;
@@ -508,7 +530,7 @@ footer {
 
     }
 
-    .navigation.active{
+    .navigation.active {
       z-index: 888;
       position: fixed;
       background: #fff;
@@ -520,20 +542,20 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      box-shadow: 0 5px 25px ;
+      box-shadow: 0 5px 25px;
       transition: 0.3s ease;
     }
 
   }
 
-  header.sticky{
+  header.sticky {
     padding: 10px 20px;
   }
 
 
 
 
-  .menu-btn{
+  .menu-btn {
     position: absolute;
     background: url($menu-icon) no-repeat;
     background-size: 30px;
@@ -546,7 +568,7 @@ footer {
     transition: 0.3s ease;
   }
 
-  .menu-btn.active{
+  .menu-btn.active {
     z-index: 999;
     background: url($menu-close) no-repeat;
     background-size: 25px;
@@ -554,68 +576,69 @@ footer {
     transition: 0.3s ease;
   }
 
-  section{
+  section {
     padding: 80px 20px;
   }
 
-  .presentacion .content h2{
+  .home .content h2 {
     font-size: 1em;
   }
 
-  .animated-text h3{
+  .animated-text h3 {
     font-size: 2.2em;
   }
 
-  .section-title{
+  .section-title {
     font-size: 1.8em;
   }
 
-  .acercade .content{
+  .about .content {
     flex-direction: column;
 
-    .column{
-     position: relative;
-     width: 100%;
-   }
-  
-    .col-right{
-     margin-top: 40px;
-   }
-  }
-
-
-  .habilidades .content{
-    flex-direction: column;
-
-    .column{
+    .column {
       position: relative;
       width: 100%;
     }
-  
-    .col-right{
+
+    .col-right {
       margin-top: 40px;
     }
   }
 
 
-  
-.trabajo .content .card{
-  width: 340px;
-  .card-img{
-   height: 171px;
-  }
-}
+  .skills .content {
+    flex-direction: column;
 
-  
-  .contacto{ 
+    .column {
+      position: relative;
+      width: 100%;
+    }
+
+    .col-right {
+      margin-top: 40px;
+    }
+  }
+
+
+
+  .trabajo .content .card {
+    width: 340px;
+
+    .card-img {
+      height: 171px;
+    }
+  }
+
+
+  .contacto {
     i {
-    margin: 0px 6px 0px 4px;
-    }  
+      margin: 0px 6px 0px 4px;
+    }
   }
 
 }
 
-.scrollToTop-btn{
+.scrollToTop-btn {
   z-index: 999;
   position: fixed;
   background: $color-primary;
@@ -634,20 +657,20 @@ footer {
   transition: all 0.3s ease;
 }
 
-.scrollToTop-btn.active{
+.scrollToTop-btn.active {
   right: 20px;
   opacity: 1;
   pointer-events: auto;
 }
 
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(50px);
   opacity: 0;
   transition: all 1.5s ease;
 }
 
-.reveal.active{
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
