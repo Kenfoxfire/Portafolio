@@ -6,6 +6,9 @@
   font-family: "Rubik", sans-serif;
   scroll-behavior: smooth;
 }
+* ul {
+  list-style: none;
+}
 
 section {
   padding: 100px 200px;
@@ -174,18 +177,15 @@ body {
 }
 
 .about .content {
-  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 .about .content .col-left {
-  position: relative;
   width: 45%;
 }
 .about .content .col-left .img-card {
-  position: relative;
   width: 100%;
   min-height: 450px;
 }
@@ -201,15 +201,19 @@ body {
   background-image: url(./src/img/img1.jpg);
 }
 .about .content .col-right {
-  position: relative;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .about .content .col-right .content-title {
+  text-align: center;
   font-size: 2em;
   font-weight: 800;
   margin-bottom: 20px;
 }
 .about .content .col-right .paragraph-text {
+  text-align: center;
   font-size: 1em;
 }
 
@@ -224,39 +228,39 @@ body {
   color: #fff;
   margin-top: 20px;
 }
-.skills .content .col-left {
-  position: relative;
-  width: 46%;
-}
-.skills .content .col-left .content-title {
-  margin-bottom: 20px;
-}
 .skills .content .col-right {
   position: relative;
   width: 46%;
 }
-.skills .content .col-right .bar {
+.skills .content .col-right .content-title {
+  margin-bottom: 20px;
+}
+.skills .content .col-left {
+  position: relative;
+  width: 46%;
+}
+.skills .content .col-left .bar {
   margin-bottom: 15px;
   padding: 10px;
 }
-.skills .content .col-right .bar .info {
+.skills .content .col-left .bar .info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 5px;
 }
-.skills .content .col-right .bar .info span {
+.skills .content .col-left .bar .info span {
   font-size: 18px;
   font-weight: 500;
 }
-.skills .content .col-right .bar .line {
+.skills .content .col-left .bar .line {
   position: relative;
   width: 100%;
   height: 15px;
   background: #ccc;
   border-radius: 2px;
 }
-.skills .content .col-right .bar .line:before {
+.skills .content .col-left .bar .line:before {
   content: "";
   position: absolute;
   height: 100%;
@@ -264,51 +268,55 @@ body {
   left: 0;
   border-radius: 2px;
 }
-.skills .content .col-right .bar .html:before {
+.skills .content .col-left .bar .html:before {
   width: 90%;
   background: #e45126;
 }
-.skills .content .col-right .bar .css:before {
+.skills .content .col-left .bar .css:before {
   width: 70%;
   background: #1e90db;
 }
-.skills .content .col-right .bar .javascript:before {
+.skills .content .col-left .bar .javascript:before {
   width: 90%;
   background: #e3a324;
 }
-.skills .content .col-right .bar .angular:before {
+.skills .content .col-left .bar .angular:before {
   width: 90%;
   background: #dd3030;
 }
-.skills .content .col-right .bar .react:before {
+.skills .content .col-left .bar .react:before {
   width: 65%;
   background: #304add;
 }
-.skills .content .col-right .bar .node:before {
+.skills .content .col-left .bar .node:before {
   width: 70%;
   background: #40a048;
 }
-.skills .content .col-right .bar .mongo:before {
+.skills .content .col-left .bar .nest:before {
+  width: 65%;
+  background: #af1e1e;
+}
+.skills .content .col-left .bar .mongo:before {
   width: 50%;
   background: #91dd97;
 }
-.skills .content .col-right .bar .couch-pouch:before {
+.skills .content .col-left .bar .couch-pouch:before {
   width: 95%;
   background: #d47069;
 }
 
-.servicios .title p {
+.services .title p {
   text-align: center;
 }
 
-.servicios .content {
+.services .content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 20px;
 }
-.servicios .content .card {
+.services .content .card {
   background: #fff;
   width: 340px;
   margin: 10px;
@@ -319,29 +327,29 @@ body {
   box-shadow: 0 5px 25px;
   border-radius: 10px;
 }
-.servicios .content .card .service-icon {
+.services .content .card .service-icon {
   color: #8a398a;
   font-size: 8em;
   text-align: center;
   transition: transform 0.5s unset;
 }
-.servicios .content .card .info {
+.services .content .card .info {
   text-align: center;
 }
-.servicios .content .card .info h3 {
+.services .content .card .info h3 {
   color: #df3d3d;
   font-size: 1.2em;
   font-weight: 700;
   margin: 10px;
 }
-.servicios .content .card:hover .service-icon {
+.services .content .card:hover .service-icon {
   transform: translateY(-10px);
 }
 
-.trabajo {
+.works {
   background: rgb(26, 15, 21);
 }
-.trabajo .content {
+.works .content {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -349,17 +357,17 @@ body {
   margin-top: 20px;
   color: #fff;
 }
-.trabajo .content p {
+.works .content p {
   margin: 20px;
 }
-.trabajo .content .card .card-img {
+.works .content .card .card-img {
   position: relative;
   width: 100%;
   height: 301px;
   overflow: hidden;
   border-radius: 10px;
 }
-.trabajo .content .card .card-img img {
+.works .content .card .card-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -370,11 +378,11 @@ body {
   border-radius: 10px;
   transition: 0.5s ease;
 }
-.trabajo .content .card .card-img img:hover {
+.works .content .card .card-img img:hover {
   transform: scale(1.2);
 }
 
-.trabajo .content .card {
+.works .content .card {
   width: 600px;
   margin: 15px;
 }
@@ -460,7 +468,7 @@ footer .contacto span {
   }
 
   section {
-    padding: 80px 20px;
+    padding: 50px 20px;
   }
 
   .home .content h2 {
@@ -494,13 +502,22 @@ footer .contacto span {
     width: 100%;
   }
   .skills .content .col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 30px;
+  }
+  .skills .content .col-right h2 {
+    text-align: center;
+  }
+  .skills .content .col-left {
     margin-top: 40px;
   }
 
-  .trabajo .content .card {
+  .works .content .card {
     width: 340px;
   }
-  .trabajo .content .card .card-img {
+  .works .content .card .card-img {
     height: 171px;
   }
 

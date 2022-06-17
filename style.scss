@@ -7,6 +7,10 @@
   box-sizing: border-box;
   font-family: $font-primary;
   scroll-behavior: smooth;
+
+  ul {
+    list-style: none;
+  }
 }
 
 
@@ -195,7 +199,6 @@ body {
 
 
 .about .content {
-  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -203,12 +206,9 @@ body {
 
 
   .col-left {
-    position: relative;
     width: 45%;
 
-
     .img-card {
-      position: relative;
       width: 100%;
       min-height: 450px;
 
@@ -221,8 +221,6 @@ body {
         object-fit: cover;
         border-radius: 10px;
         background-image: url(./src/img/img1.jpg);
-
-
       }
     }
 
@@ -230,16 +228,20 @@ body {
   }
 
   .col-right {
-    position: relative;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .content-title {
+      text-align: center;
       font-size: 2em;
       font-weight: 800;
       margin-bottom: 20px;
     }
 
     .paragraph-text {
+      text-align: center;
       font-size: 1em;
     }
 
@@ -263,7 +265,7 @@ body {
     margin-top: 20px;
 
 
-    .col-left {
+    .col-right {
       position: relative;
       width: 46%;
 
@@ -274,7 +276,7 @@ body {
     }
 
 
-    .col-right {
+    .col-left {
       position: relative;
       width: 46%;
 
@@ -320,8 +322,6 @@ body {
           background: #e45126;
         }
 
-
-
         .css:before {
           width: 70%;
           background: #1e90db;
@@ -347,6 +347,11 @@ body {
           background: #40a048;
         }
 
+        .nest:before {
+          width: 65%;
+          background: #af1e1e;
+        }
+
         .mongo:before {
           width: 50%;
           background: #91dd97;
@@ -365,7 +370,7 @@ body {
 }
 
 
-.servicios .title p {
+.services .title p {
 
   text-align: center;
 
@@ -373,7 +378,7 @@ body {
 
 }
 
-.servicios .content {
+.services .content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -423,7 +428,7 @@ body {
 
 
 
-.trabajo {
+.works {
   background: $background-color;
 
   .content {
@@ -470,7 +475,7 @@ body {
 
 //  TODO 
 
-.trabajo .content .card {
+.works .content .card {
   width: 600px;
   margin: 15px;
 }
@@ -577,7 +582,7 @@ footer {
   }
 
   section {
-    padding: 80px 20px;
+    padding: 50px 20px;
   }
 
   .home .content h2 {
@@ -615,13 +620,25 @@ footer {
     }
 
     .col-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 30px;
+
+      h2 {
+        text-align: center;
+      }
+
+    }
+
+    .col-left {
       margin-top: 40px;
     }
   }
 
 
 
-  .trabajo .content .card {
+  .works .content .card {
     width: 340px;
 
     .card-img {
