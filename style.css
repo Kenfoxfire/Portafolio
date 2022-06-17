@@ -98,7 +98,7 @@ header {
   align-items: center;
   transition: 0.5s ease;
 }
-header .nombre {
+header .name {
   color: #fff;
   font-size: 1em;
   font-weight: 700;
@@ -349,12 +349,21 @@ body {
 .works {
   background: rgb(26, 15, 21);
 }
+.works h3 {
+  margin: 20px;
+  text-align: center;
+  color: #fff;
+}
+.works h3:nth-child(5) {
+  margin-top: 8em;
+}
 .works .content {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: #fff;
 }
 .works .content p {
@@ -472,7 +481,7 @@ footer .contacto span {
   }
 
   .home .content h2 {
-    font-size: 1em;
+    font-size: 2.5em;
   }
 
   .animated-text h3 {

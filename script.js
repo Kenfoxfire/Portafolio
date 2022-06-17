@@ -1,45 +1,45 @@
-const spanTextoTecleado = document.getElementById("texto-escribir");
+const spanTextKeyboard = document.getElementById("text-to-write");
 const cursorSpan = document.querySelector(".cursor");
 
-const texto = "FullStack Web Development";
-const tiempoTeclear = 150;
-const velocidadBorrar = 100;
-const esperaBorrar = 2000; 
+const text = "FullStack Web Development";
+const typingTime = 150;
+const ereaserVelocity = 100;
+const waitingTime = 2000; 
 
-let letraIndice = 0;
+let letterIndex = 0;
 
-function teclear() {
-  if (letraIndice < texto.length) {
+function typing() {
+  if (letterIndex < text.length) {
     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    spanTextoTecleado.textContent += texto.charAt(letraIndice);
-    letraIndice++;
-    setTimeout(teclear, tiempoTeclear);
+    spanTextKeyboard.textContent += text.charAt(letterIndex);
+    letterIndex++;
+    setTimeout(typing, typingTime);
   } 
   else {
     cursorSpan.classList.remove("typing");
-  	setTimeout(borrar, esperaBorrar);
+  	setTimeout(eraser, waitingTime);
   }
 }
 
-function borrar() {
-	if (letraIndice > 0) {
+function eraser() {
+	if (letterIndex > 0) {
     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    spanTextoTecleado.textContent = texto.substring(0, letraIndice-1);
-    letraIndice--;
-    setTimeout(borrar, velocidadBorrar);
+    spanTextKeyboard.textContent = text.substring(0, letterIndex-1);
+    letterIndex--;
+    setTimeout(eraser, ereaserVelocity);
   } 
   else {
     cursorSpan.classList.remove("typing");
-    setTimeout(teclear, tiempoTeclear + 1100);
+    setTimeout(typing, typingTime + 1100);
   }
 }
 
-document.addEventListener("DOMContentLoaded", ()=> { // Cuando este cargado el Dom, se ejecuta la funcion
-  if(texto.length) setTimeout(teclear, esperaBorrar + 300);
+document.addEventListener("DOMContentLoaded", ()=> { // If document is loaded => execute the function
+  if(text.length) setTimeout(typing, waitingTime + 300);
 });
 
 
-  // Activar barra en top
+  // Activate reveal on scroll
 window.addEventListener("scroll", function(){
     const header = document.querySelector("header");
     header.classList.toggle('sticky', window.scrollY > 0);
@@ -75,7 +75,7 @@ window.addEventListener("scroll", function(){
     document.documentElement.scrollTop = 0;
   });
   
-  // !transparentar
+  // !transparent
   window.addEventListener("scroll", reveal);
   
   function reveal(){

@@ -104,7 +104,7 @@ header {
 
 
 
-  .nombre {
+  .name {
     color: #fff;
     font-size: 1em;
     font-weight: 700;
@@ -431,12 +431,22 @@ body {
 .works {
   background: $background-color;
 
+  h3 {
+    margin: 20px;
+    text-align: center;
+    color: $color-white;
+  }
+  h3:nth-child(5) {
+    margin-top: 8em;
+  }
+
   .content {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 20px;
     color: $color-white;
 
 
@@ -586,7 +596,7 @@ footer {
   }
 
   .home .content h2 {
-    font-size: 1em;
+    font-size: 2.5em;
   }
 
   .animated-text h3 {
