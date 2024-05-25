@@ -281,13 +281,9 @@ body {
       width: 46%;
 
       .bar {
-        margin-bottom: 5px;
-        padding: 10px;
-
         .info {
           display: flex;
           align-items: center;
-          justify-content: space-between;
           margin-bottom: 5px;
 
           span {
@@ -553,6 +549,10 @@ footer {
 
     .col-right {
       margin-top: 40px;
+
+      li{
+        margin-bottom: 3px;
+      }
     }
   }
 
