@@ -46,26 +46,7 @@ section {
   background-color: #ccc;
   margin-left: 0.1rem;
   width: 3px;
-  -webkit-animation: blink 1s infinite;
-          animation: blink 1s infinite;
-}
-
-@-webkit-keyframes blink {
-  0% {
-    background-color: #ccc;
-  }
-  49% {
-    background-color: #ccc;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #ccc;
-  }
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
@@ -240,7 +221,7 @@ body {
   width: 46%;
 }
 .skills .content .col-left .bar {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding: 10px;
 }
 .skills .content .col-left .bar .info {
@@ -252,57 +233,6 @@ body {
 .skills .content .col-left .bar .info span {
   font-size: 18px;
   font-weight: 500;
-}
-.skills .content .col-left .bar .line {
-  position: relative;
-  width: 100%;
-  height: 15px;
-  background: #ccc;
-  border-radius: 2px;
-}
-.skills .content .col-left .bar .line:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 2px;
-}
-.skills .content .col-left .bar .html:before {
-  width: 90%;
-  background: #e45126;
-}
-.skills .content .col-left .bar .css:before {
-  width: 70%;
-  background: #1e90db;
-}
-.skills .content .col-left .bar .javascript:before {
-  width: 90%;
-  background: #e3a324;
-}
-.skills .content .col-left .bar .angular:before {
-  width: 90%;
-  background: #dd3030;
-}
-.skills .content .col-left .bar .react:before {
-  width: 65%;
-  background: #304add;
-}
-.skills .content .col-left .bar .node:before {
-  width: 70%;
-  background: #40a048;
-}
-.skills .content .col-left .bar .nest:before {
-  width: 65%;
-  background: #af1e1e;
-}
-.skills .content .col-left .bar .mongo:before {
-  width: 50%;
-  background: #91dd97;
-}
-.skills .content .col-left .bar .couch-pouch:before {
-  width: 95%;
-  background: #d47069;
 }
 
 .services .title p {
@@ -450,11 +380,9 @@ footer .contacto span {
     box-shadow: 0 5px 25px;
     transition: 0.3s ease;
   }
-
   header.sticky {
     padding: 10px 20px;
   }
-
   .menu-btn {
     position: absolute;
     background: url("./src/img/menu-icon.svg") no-repeat;
@@ -467,7 +395,6 @@ footer .contacto span {
     cursor: pointer;
     transition: 0.3s ease;
   }
-
   .menu-btn.active {
     z-index: 999;
     background: url("./src/img/menu-close.svg") no-repeat;
@@ -475,23 +402,18 @@ footer .contacto span {
     background-position: center;
     transition: 0.3s ease;
   }
-
   section {
     padding: 50px 20px;
   }
-
   .home .content h2 {
     font-size: 2.5em;
   }
-
   .animated-text h3 {
     font-size: 2.2em;
   }
-
   .section-title {
     font-size: 1.8em;
   }
-
   .about .content {
     flex-direction: column;
   }
@@ -502,7 +424,6 @@ footer .contacto span {
   .about .content .col-right {
     margin-top: 40px;
   }
-
   .skills .content {
     flex-direction: column;
   }
@@ -522,14 +443,12 @@ footer .contacto span {
   .skills .content .col-left {
     margin-top: 40px;
   }
-
   .works .content .card {
     width: 340px;
   }
   .works .content .card .card-img {
     height: 171px;
   }
-
   .contacto i {
     margin: 0px 6px 0px 4px;
   }
